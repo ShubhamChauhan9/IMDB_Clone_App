@@ -1,5 +1,7 @@
    1-html and css 
     structure and styling of the website to present how the website and its various sections look 
+    
+    
    2-JS 
     SearchMovie() function
    to search the movie name in the search input field
