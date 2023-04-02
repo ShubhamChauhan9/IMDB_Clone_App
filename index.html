@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="imdb_logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="nav-container">
+        <div class="nav">
+            <img src="imdb_logo.png" alt="IMDB" onclick="navigateToHome()">
+            <input type="text" id="input-search" placeholder="search IMDB" value="" onkeyup="searchMovies()" onclick="searchMovies()">
+            <i id="search-icon" class="fa-brands fa-searchengin"></i>
+
+            <button id="btn" onclick="showFav()">My Favourite</button>
+        </div>
+        <div id="searchList" class="hide-search-list">
+        </div>
+
+        <div id="movie_Page">
+        </div>
+        <div id="searchResults" class="hide-search-list"></div>
+        <div id="fav"></div>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
