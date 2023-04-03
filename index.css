@@ -193,23 +193,28 @@ body {
 
 @media screen and (max-width:400px) {
     #movie_Page,
-    #searchResults {
+    #searchResults,
+    .fav-item {
         width: 96%;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 }
 
-@media screen and (min-width:400px) {
+@media screen and (max-width:600px) {
     #movie_Page,
-    #searchResults {
-        width: 90%;
-    }
-}
-
-@media screen and (min-width:600px) {
-    #movie_Page,
-    #searchResults {
+    #searchResults,
+    .fav-item {
         width: 80%;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width:765px) {
+    #movie_Page,
+    #searchResults,
+    .fav-item {
+        width: 70%;
+        flex-wrap: wrap;
     }
 }
 
