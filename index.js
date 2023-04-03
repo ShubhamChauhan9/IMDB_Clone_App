@@ -122,7 +122,7 @@ function loadMovieDetails() {
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', () => {
-            fetch(`http://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9beb446c`)
+            fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9beb446c`)
                 .then((response) => response.json())
                 .then((data) => {
                     displayMovieDetails(data);
@@ -184,7 +184,7 @@ function displayMovieList(movies) {
 
         // console.log(movieListItem);
         // api using id is being fethched here
-        fetch(`http://www.omdbapi.com/?i=${movies[idx].imdbID}&apikey=9beb446c`)
+        fetch(`https://www.omdbapi.com/?i=${movies[idx].imdbID}&apikey=9beb446c`)
             .then((response) => response.json())
             .then((data) => {
                 if (movies[idx].Poster != "N/A")
