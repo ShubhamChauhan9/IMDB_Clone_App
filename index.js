@@ -118,11 +118,11 @@ function displayMovieDetails(details) {
     `;
 }
 
-function loadMovieDetails() {
+async function loadMovieDetails() {
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', () => {
-            fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9beb446c`)
+           await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9beb446c`)
                 .then((response) => response.json())
                 .then((data) => {
                     displayMovieDetails(data);
@@ -172,7 +172,7 @@ function getListFromtLocalStorage() {
     return favMovies;
 }
 
-function displayMovieList(movies) {
+async function displayMovieList(movies) {
     searchList.innerHTML = "";
     searchList.classList.remove('hide-search-list');
 
@@ -184,7 +184,7 @@ function displayMovieList(movies) {
 
         // console.log(movieListItem);
         // api using id is being fethched here
-        fetch(`https://www.omdbapi.com/?i=${movies[idx].imdbID}&apikey=9beb446c`)
+       await fetch(`https://www.omdbapi.com/?i=${movies[idx].imdbID}&apikey=9beb446c`)
             .then((response) => response.json())
             .then((data) => {
                 if (movies[idx].Poster != "N/A")
