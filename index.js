@@ -118,11 +118,11 @@ function displayMovieDetails(details) {
     `;
 }
 
-async function loadMovieDetails() {
+ function loadMovieDetails() {
     const searchListMovies = searchList.querySelectorAll('.search-list-item');
     searchListMovies.forEach(movie => {
         movie.addEventListener('click', () => {
-           await fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9beb446c`)
+            fetch(`https://www.omdbapi.com/?i=${movie.dataset.id}&apikey=9beb446c`)
                 .then((response) => response.json())
                 .then((data) => {
                     displayMovieDetails(data);
