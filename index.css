@@ -213,7 +213,7 @@ body {
     #movie_Page,
     #searchResults,
     .fav-item {
-        width: 70%;
+        width: 92%;
         flex-wrap: wrap;
     }
 }
@@ -221,14 +221,14 @@ body {
 @media screen and (min-width:767px) {
     #movie_Page,
     #searchResults {
-        width: 65%;
+        width: 88%;
     }
 }
 
 @media screen and (min-width:992px) {
     #movie_Page,
     #searchResults {
-        width: 70%;
+        width: 85%;
     }
 }
 
